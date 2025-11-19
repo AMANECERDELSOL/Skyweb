@@ -545,12 +545,141 @@ const Legal: React.FC = () => {
         </div>
       </div>
       
-      <style jsx>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-10px) rotate(180deg); }
-        }
-      `}</style>
+        {/* Category Filters */}
+        <div className="flex flex-wrap justify-center gap-2 mb-12">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                selectedCategory === category
+                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25'
+                  : 'bg-gray-800/50 text-gray-400 hover:text-white hover:bg-gray-700/50 border border-gray-700'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
+        {/* Documents Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredDocuments.map((document) => (
+            <div
+              key={document.id}
+              className="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-500 transform hover:scale-105 cursor-pointer"
+              onClick={() => handleDocumentClick(document.id)}
+            >
+              {/* Category Badge */}
+              <div className="inline-flex items-center space-x-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-3 py-1 mb-4">
+                <span className="text-cyan-400 text-xs font-medium">{document.category}</span>
+              </div>
+
+              {/* Icon */}
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                <document.icon className="w-6 h-6 text-white" />
+              </div>
+
+              {/* Content */}
+              <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300 leading-tight">
+                {document.title}
+              </h3>
+              
+              <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+                {document.description}
+              </p>
+
+              {/* Action Button */}
+              <div className="flex items-center justify-between">
+                <span className="text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors duration-300">
+                  Solicitar documento
+                </span>
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <Download className="w-4 h-4 text-cyan-400" />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Contact Information */}
+        <div className="mt-16">
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/20">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                ¿Necesitas algún documento específico?
+              </h3>
+              <p className="text-gray-400 mb-6">
+                Todos nuestros documentos legales y regulatorios están disponibles. 
+                Contáctanos para obtener cualquier información adicional.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-gray-800/50 rounded-xl p-6">
+                  <h4 className="text-lg font-bold text-white mb-2">Contacto Directo</h4>
+                  <p className="text-gray-400 text-sm mb-3">Para solicitudes de documentos legales</p>
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <Phone className="w-4 h-4 text-cyan-400" />
+                      <span className="text-cyan-400">+52 1 999 210 2204</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <FileText className="w-4 h-4 text-cyan-400" />
+                      <span className="text-cyan-400">huchalebaltazar@skyweb.mx</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-xl p-6">
+                  <h4 className="text-lg font-bold text-white mb-2">Autoridades Competentes</h4>
+                  <p className="text-gray-400 text-sm mb-3">Información para autoridades de seguridad y justicia</p>
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <Shield className="w-4 h-4 text-cyan-400" />
+                      <span className="text-cyan-400">Disponible 24/7</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <AlertTriangle className="w-4 h-4 text-cyan-400" />
+                      <span className="text-cyan-400">Respuesta inmediata</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                onClick={() => {
+                  const message = encodeURIComponent(
+                    '¡Hola Skyweb! Me interesa obtener información sobre sus documentos legales y regulatorios. ¿Podrían ayudarme?'
+                  );
+                  window.open(`https://wa.me/5219992102204?text=${message}`, '_blank');
+                }}
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full font-bold text-white hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105"
+              >
+                <span>Contactar Ahora</span>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Compliance Notice */}
+        <div className="mt-12 text-center">
+          <div className="bg-gray-800/30 rounded-xl p-6 border border-gray-700/30">
+            <p className="text-gray-400 text-sm leading-relaxed">
+              <strong className="text-white">Skyweb</strong> opera en cumplimiento con todas las disposiciones 
+              del Instituto Federal de Telecomunicaciones (IFT) y la normatividad vigente en materia de 
+              telecomunicaciones. Todos nuestros documentos están actualizados conforme a la legislación actual.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Legal;
     </section>
   );
 };
