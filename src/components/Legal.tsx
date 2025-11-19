@@ -1,3 +1,6 @@
+import React, { useState } from 'react';
+import { FileText, Download, Shield, Scale, AlertTriangle, Phone } from 'lucide-react';
+
 const Legal = () => {
   const [selectedDocument, setSelectedDocument] = useState<string | null>(null);
 
@@ -31,6 +34,13 @@ const Legal = () => {
       category: 'Transparencia'
     },
     {
+      id: 'autoridades',
+      title: 'Datos para Contacto con Autoridades de Seguridad y Justicia',
+      icon: Phone,
+      description: 'Información de contacto para autoridades competentes.',
+      category: 'Seguridad'
+    },
+    {
       id: 'contrato',
       title: 'Registro de Contrato de Adhesión',
       icon: FileText,
@@ -50,6 +60,27 @@ const Legal = () => {
       icon: Shield,
       description: 'Derechos fundamentales de nuestros usuarios.',
       category: 'Derechos'
+    },
+    {
+      id: 'procedimientos',
+      title: 'Procedimientos de Dudas, Quejas, Aclaraciones y Reclamaciones',
+      icon: AlertTriangle,
+      description: 'Proceso para resolver dudas, quejas y reclamaciones.',
+      category: 'Procedimientos'
+    },
+    {
+      id: 'operaciones',
+      title: 'Aviso de Inicio de Operaciones',
+      icon: FileText,
+      description: 'Documentación de inicio de operaciones ante el IFT.',
+      category: 'Concesión'
+    },
+    {
+      id: 'ventanilla',
+      title: 'Acceso a Ventanilla Electrónica',
+      icon: FileText,
+      description: 'Acceso y documentación de ventanilla electrónica del IFT.',
+      category: 'Concesión'
     },
     {
       id: 'eformato',
