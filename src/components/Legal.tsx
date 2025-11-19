@@ -1,6 +1,3 @@
-import React, { useState } from 'react';
-import { FileText, Download, Shield, Scale, AlertTriangle, Phone } from 'lucide-react';
-
 const Legal = () => {
   const [selectedDocument, setSelectedDocument] = useState<string | null>(null);
 
@@ -53,14 +50,6 @@ const Legal = () => {
       icon: Shield,
       description: 'Derechos fundamentales de nuestros usuarios.',
       category: 'Derechos'
-    },
-    {
-      id: 'operaciones',
-      title: 'Aviso de Inicio de Operaciones',
-      icon: FileText,
-      description: 'Documentación de inicio de operaciones ante el IFT.',
-      category: 'Concesión'
-    },
     },
     {
       id: 'eformato',
