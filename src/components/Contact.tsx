@@ -149,7 +149,7 @@ const Contact = () => {
             <Phone className="w-4 h-4 text-cyan-400" />
             <span className="text-cyan-400 font-medium">Contacto</span>
           </div>
-          
+
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
               Conectemos
@@ -159,9 +159,9 @@ const Contact = () => {
               Contigo
             </span>
           </h2>
-          
+
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            ¿Listo para transformar tu conectividad? Nuestro equipo de expertos está 
+            ¿Listo para transformar tu conectividad? Nuestro equipo de expertos está
             aquí para ayudarte a encontrar la solución perfecta.
           </p>
         </div>
@@ -170,7 +170,7 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
             <h3 className="text-2xl font-bold text-white mb-6">Envíanos un Mensaje</h3>
-            
+
             {submitStatus === 'success' && (
               <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-4 mb-6 flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-green-400" />
@@ -197,11 +197,10 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className={`w-full px-4 py-3 bg-gray-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-all duration-300 ${
-                    errors.name 
-                      ? 'border-red-500 focus:ring-red-500/50' 
+                  className={`w-full px-4 py-3 bg-gray-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-all duration-300 ${errors.name
+                      ? 'border-red-500 focus:ring-red-500/50'
                       : 'border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
-                  }`}
+                    }`}
                   placeholder="Tu nombre completo"
                 />
                 {errors.name && <p className="text-red-400 text-sm mt-1">{errors.name}</p>}
@@ -218,11 +217,10 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className={`w-full px-4 py-3 bg-gray-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-all duration-300 ${
-                    errors.email 
-                      ? 'border-red-500 focus:ring-red-500/50' 
+                  className={`w-full px-4 py-3 bg-gray-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-all duration-300 ${errors.email
+                      ? 'border-red-500 focus:ring-red-500/50'
                       : 'border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
-                  }`}
+                    }`}
                   placeholder="tu@email.com"
                 />
                 {errors.email && <p className="text-red-400 text-sm mt-1">{errors.email}</p>}
@@ -239,11 +237,10 @@ const Contact = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className={`w-full px-4 py-3 bg-gray-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-all duration-300 ${
-                    errors.phone 
-                      ? 'border-red-500 focus:ring-red-500/50' 
+                  className={`w-full px-4 py-3 bg-gray-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-all duration-300 ${errors.phone
+                      ? 'border-red-500 focus:ring-red-500/50'
                       : 'border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
-                  }`}
+                    }`}
                   placeholder="999 123 4567"
                 />
                 {errors.phone && <p className="text-red-400 text-sm mt-1">{errors.phone}</p>}
@@ -259,11 +256,10 @@ const Contact = () => {
                   name="service"
                   value={formData.service}
                   onChange={handleInputChange}
-                  className={`w-full px-4 py-3 bg-gray-700/50 border rounded-lg text-white focus:outline-none focus:ring-2 transition-all duration-300 ${
-                    errors.service 
-                      ? 'border-red-500 focus:ring-red-500/50' 
+                  className={`w-full px-4 py-3 bg-gray-700/50 border rounded-lg text-white focus:outline-none focus:ring-2 transition-all duration-300 ${errors.service
+                      ? 'border-red-500 focus:ring-red-500/50'
                       : 'border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
-                  }`}
+                    }`}
                 >
                   <option value="">Selecciona el tipo de consulta</option>
                   {services.map((service) => (
@@ -284,11 +280,10 @@ const Contact = () => {
                   rows={4}
                   value={formData.message}
                   onChange={handleInputChange}
-                  className={`w-full px-4 py-3 bg-gray-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-all duration-300 resize-none ${
-                    errors.message 
-                      ? 'border-red-500 focus:ring-red-500/50' 
+                  className={`w-full px-4 py-3 bg-gray-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-all duration-300 resize-none ${errors.message
+                      ? 'border-red-500 focus:ring-red-500/50'
                       : 'border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
-                  }`}
+                    }`}
                   placeholder="Cuéntanos sobre tu proyecto o necesidades..."
                 />
                 {errors.message && <p className="text-red-400 text-sm mt-1">{errors.message}</p>}
@@ -339,7 +334,7 @@ const Contact = () => {
                   title: 'Oficina Principal',
                   info: 'C. 138A 1318, 97249 Paseos Diamante De Opichen\nMérida, Yucatán',
                   description: 'Visítanos para una consulta personalizada',
-                  action: () => window.open('<iframe src="https://www.google.com/maps/embed?pb=!4v1764343684522!6m8!1m7!1sMT-tnTZbDUQWTLqHNUAbPA!2m2!1d20.93599248630852!2d-89.68429030193525!3f130.5862713439493!4f2.3705752169640135!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>')
+                  action: () => window.open('https://maps.google.com/?q=Merida,Yucatan')
                 }
               ].map((contact, index) => (
                 <div
@@ -372,9 +367,9 @@ const Contact = () => {
               <h4 className="text-lg font-bold text-white mb-4">Nuestra Ubicación</h4>
               <div className="aspect-video bg-gray-700 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d465.8013179840798!2d-89.68424647410069!3d20.93602205683997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1757318710178!5m2!1ses-419!2smx"
-                  width="100%"
-                  height="100%"
+                  src="https://www.google.com/maps/embed?pb=!4v1764343684522!6m8!1m7!1sMT-tnTZbDUQWTLqHNUAbPA!2m2!1d20.93599248630852!2d-89.68429030193525!3f130.5862713439493!4f2.3705752169640135!5f0.7820865974627469"
+                  width="600"
+                  height="450"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
