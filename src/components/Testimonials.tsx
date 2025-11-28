@@ -73,7 +73,7 @@ const Testimonials = () => {
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
+      setCurrentIndex((prevIndex) =>
         prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
       );
     }, 5000);
@@ -100,7 +100,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800 relative overflow-hidden">
+    <section id="testimonials" className="py-20 bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 right-10 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse" />
@@ -114,7 +114,7 @@ const Testimonials = () => {
             <Quote className="w-4 h-4 text-cyan-400" />
             <span className="text-cyan-400 font-medium">Testimonios</span>
           </div>
-          
+
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
               Lo que Dicen
@@ -124,9 +124,9 @@ const Testimonials = () => {
               Nuestros Clientes
             </span>
           </h2>
-          
+
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            La satisfacción de nuestros clientes es nuestro mayor logro. 
+            La satisfacción de nuestros clientes es nuestro mayor logro.
             Descubre por qué confían en Skyweb para su conectividad.
           </p>
         </div>
@@ -209,11 +209,10 @@ const Testimonials = () => {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex
-                   ? 'bg-cyan-500 scale-125' 
-                   : 'bg-gray-600 hover:bg-gray-500'
-                }`}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
+                    ? 'bg-cyan-500 scale-125'
+                    : 'bg-gray-600 hover:bg-gray-500'
+                  }`}
               />
             ))}
           </div>
