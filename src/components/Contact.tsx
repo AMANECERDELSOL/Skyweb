@@ -198,8 +198,8 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   className={`w-full px-4 py-3 bg-gray-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-all duration-300 ${errors.name
-                      ? 'border-red-500 focus:ring-red-500/50'
-                      : 'border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
+                    ? 'border-red-500 focus:ring-red-500/50'
+                    : 'border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
                     }`}
                   placeholder="Tu nombre completo"
                 />
@@ -218,8 +218,8 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   className={`w-full px-4 py-3 bg-gray-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-all duration-300 ${errors.email
-                      ? 'border-red-500 focus:ring-red-500/50'
-                      : 'border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
+                    ? 'border-red-500 focus:ring-red-500/50'
+                    : 'border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
                     }`}
                   placeholder="tu@email.com"
                 />
@@ -238,8 +238,8 @@ const Contact = () => {
                   value={formData.phone}
                   onChange={handleInputChange}
                   className={`w-full px-4 py-3 bg-gray-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-all duration-300 ${errors.phone
-                      ? 'border-red-500 focus:ring-red-500/50'
-                      : 'border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
+                    ? 'border-red-500 focus:ring-red-500/50'
+                    : 'border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
                     }`}
                   placeholder="999 123 4567"
                 />
@@ -257,8 +257,8 @@ const Contact = () => {
                   value={formData.service}
                   onChange={handleInputChange}
                   className={`w-full px-4 py-3 bg-gray-700/50 border rounded-lg text-white focus:outline-none focus:ring-2 transition-all duration-300 ${errors.service
-                      ? 'border-red-500 focus:ring-red-500/50'
-                      : 'border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
+                    ? 'border-red-500 focus:ring-red-500/50'
+                    : 'border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
                     }`}
                 >
                   <option value="">Selecciona el tipo de consulta</option>
@@ -281,8 +281,8 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   className={`w-full px-4 py-3 bg-gray-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-all duration-300 resize-none ${errors.message
-                      ? 'border-red-500 focus:ring-red-500/50'
-                      : 'border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
+                    ? 'border-red-500 focus:ring-red-500/50'
+                    : 'border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
                     }`}
                   placeholder="Cuéntanos sobre tu proyecto o necesidades..."
                 />
@@ -367,9 +367,9 @@ const Contact = () => {
               <h4 className="text-lg font-bold text-white mb-4">Nuestra Ubicación</h4>
               <div className="aspect-video bg-gray-700 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!4v1764343684522!6m8!1m7!1sMT-tnTZbDUQWTLqHNUAbPA!2m2!1d20.93599248630852!2d-89.68429030193525!3f130.5862713439493!4f2.3705752169640135!5f0.7820865974627469"
-                  width="600"
-                  height="450"
+                  src="https://www.google.com/maps/embed?pb=!4v1764344377109!6m8!1m7!1sMT-tnTZbDUQWTLqHNUAbPA!2m2!1d20.93599248630852!2d-89.68429030193525!3f130.59!4f2.3700000000000045!5f0.7820865974627469"
+                  width="100%"
+                  height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
