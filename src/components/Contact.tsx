@@ -339,7 +339,7 @@ const Contact = () => {
                   title: 'Oficina Principal',
                   info: 'C. 138A 1318, 97249 Paseos Diamante De Opichen\nMérida, Yucatán',
                   description: 'Visítanos para una consulta personalizada',
-                  action: () => window.open('https://maps.google.com/?q=Merida,Yucatan')
+                  action: () => window.open('<iframe src="https://www.google.com/maps/embed?pb=!4v1764343684522!6m8!1m7!1sMT-tnTZbDUQWTLqHNUAbPA!2m2!1d20.93599248630852!2d-89.68429030193525!3f130.5862713439493!4f2.3705752169640135!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>')
                 }
               ].map((contact, index) => (
                 <div
